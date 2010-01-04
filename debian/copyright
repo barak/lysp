@@ -1,0 +1,30 @@
+This package was debianized by Barak A. Pearlmutter <bap@debian.org> on
+Mon, 04 Jan 2010 15:40:03 +0100.
+
+It was downloaded from http://piumarta.com/software/lysp/
+       		       http://piumarta.com/software/lysp/lysp-1.0.tar.gz
+
+Upstream Author(s):
+
+    Ian Piumarta <ian@vpri.org>
+
+Copyright:
+
+    Copyright (c) 2008 Ian Piumarta
+
+License:
+
+    Permission is hereby granted, free of charge, to any person obtaining a
+    copy of this software and associated documentation files (the 'Software'),
+    to deal in the Software without restriction, including without limitation
+    the rights to use, copy, modify, merge, publish, distribute, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, provided that the above copyright notice(s) and this
+    permission notice appear in all copies of the Software.  Inclusion of the
+    the above copyright notice(s) and this permission notice in supporting
+    documentation would be appreciated but is not required.
+
+    THE SOFTWARE IS PROVIDED 'AS IS'.  USE ENTIRELY AT YOUR OWN RISK.
+
+The Debian packaging is (C) 2010, Barak A. Pearlmutter <bap@debian.org> and
+is placed in the public domain.

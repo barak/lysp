@@ -1,0 +1,2 @@
+lysp /usr/bin/
+test.l bench.l /usr/share/lib/lysp/

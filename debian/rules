@@ -1,0 +1,18 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@
+
+override_dh_auto_build:
+	$(MAKE) -f /dev/null					\
+		CPPFLAGS+=-DNDEBUG				\
+		CPPFLAGS+=-DBDWGC=1				\
+		LOADLIBES+=-lgc					\
+		LDFLAGS+=-rdynamic				\
+		CFLAGS+=-O3					\
+		CFLAGS+=-g					\
+		CFLAGS+="-Wall -Wextra -Wno-unused-parameter"	\
+		lysp
+
+override_dh_auto_test:
+	@echo skipping automatic tests
