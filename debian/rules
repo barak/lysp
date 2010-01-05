@@ -1,18 +1,23 @@
 #!/usr/bin/make -f
 
-%:
+build clean install binary-arch binary-indep binary:
 	dh $@
 
-override_dh_auto_build:
-	$(MAKE) -f /dev/null					\
-		CPPFLAGS+=-DNDEBUG				\
-		CPPFLAGS+=-DBDWGC=1				\
-		LOADLIBES+=-lgc					\
-		LDFLAGS+=-rdynamic				\
-		CFLAGS+=-O3					\
-		CFLAGS+=-g					\
-		CFLAGS+="-Wall -Wextra -Wno-unused-parameter"	\
-		lysp
+.PHONY: build clean install binary-arch binary-indep binary
+
+CFLAGS+=-Wall -Wextra -Wno-unused-parameter
+
+CPPFLAGS+=-DNDEBUG
+CFLAGS+=-g
+
+CPPFLAGS+=-DBDWGC=1
+LOADLIBES+=-lgc
+
+LDFLAGS+=-rdynamic
+
+CFLAGS+=-O3
+
+override_dh_auto_build: lysp
 
 override_dh_auto_test:
 	@echo skipping automatic tests
